@@ -1,0 +1,57 @@
+ESG News Analyzer & Sentiment Tracker
+=====================================
+
+SUBMISSION DETAILS
+------------------
+Project Name: ESG News Analyzer & Sentiment Tracker
+Submission Date: February 2026
+Technology Stack: React, Node.js, Express, Firebase, Google Gemini AI
+
+TEAM MEMBERS
+------------
+[Add your name and details here]
+
+PROJECT STRUCTURE
+-----------------
+/client          - React frontend (Vite + TypeScript)
+/server          - Express.js backend
+/docs            - Documentation (Problem Statement, AI Usage Report)
+README.md        - Setup instructions and API documentation
+
+HOW TO RUN
+----------
+1. Install dependencies:
+   cd server && npm install
+   cd client && npm install
+
+2. Configure environment:
+   Add GEMINI_API_KEY to server/.env
+
+3. Start servers:
+   Terminal 1: cd server && npm run dev
+   Terminal 2: cd client && npm run dev
+
+4. Open: http://localhost:5173
+
+KEY FEATURES
+------------
+[x] Company search with autocomplete
+[x] AI-powered sentiment analysis (Gemini API)
+[x] ESG categorization (Environmental/Social/Governance)
+[x] Interactive dashboard with charts
+[x] AI-generated company ESG summaries
+[x] Responsive design
+
+DOCUMENTATION
+-------------
+- README.md - Complete setup guide
+- docs/PROBLEM_STATEMENT.md - Problem definition
+- docs/AI_USAGE_REPORT.md - AI integration details
+
+VIDEO DEMO
+----------
+[Add link to your video demo here]
+
+REPOSITORY
+----------
+[Add GitHub repository link here]
