@@ -7,7 +7,7 @@ Assessment: ESG News Analyzer & Sentiment Tracker
 Links
 -----
 GitHub Repository: https://github.com/EMananq/2_ps
-Video Demo: [ADD YOUR VIDEO LINK HERE]
+Video Demo: https://youtu.be/_wZI5Q9Z9Ek
 
 Files Included
 --------------
