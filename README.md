@@ -1,135 +1,134 @@
 # ESG News Analyzer & Sentiment Tracker
 
-AI-powered platform for analyzing ESG (Environmental, Social, Governance) news with sentiment analysis and intelligent categorization.
+A web application that aggregates ESG-related news about companies and uses AI to analyze sentiment and categorize issues into Environmental, Social, or Governance categories.
 
-![ESG News Analyzer](https://img.shields.io/badge/ESG-News%20Analyzer-667eea?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js)
-![Firebase](https://img.shields.io/badge/Firebase-Firestore-ffca28?style=flat-square&logo=firebase)
-![Gemini AI](https://img.shields.io/badge/Google-Gemini%20AI-4285f4?style=flat-square&logo=google)
+![Tech Stack](https://img.shields.io/badge/React-18-blue) ![Node.js](https://img.shields.io/badge/Node.js-Express-green) ![AI](https://img.shields.io/badge/AI-Gemini%202.5-purple)
 
-## 🌟 Features
+## Features
 
-### Core Features
+### Core Functionality
 
-- **Company Search** - Search and explore 10 major companies with ESG news coverage
-- **AI Sentiment Analysis** - Real-time sentiment analysis (Positive/Negative/Neutral) using Google Gemini
-- **ESG Categorization** - Auto-categorize news into Environmental, Social, or Governance
-- **Interactive Dashboard** - View company ESG performance with charts and visualizations
-- **AI-Generated Summaries** - Get intelligent ESG summaries with key concerns and positives
+- **Company Search** - Search for any company and view their ESG news
+- **AI Sentiment Analysis** - Each article analyzed as Positive/Negative/Neutral with confidence scores
+- **ESG Categorization** - Articles auto-tagged as Environmental, Social, or Governance
+- **Trend Dashboard** - Visual charts showing sentiment trends over time
+- **AI Summaries** - Generated insights highlighting key concerns and developments
 
-### Visualizations
+### Tech Stack
 
-- Sentiment trend charts over time
-- ESG category distribution (pie chart)
-- Sentiment distribution statistics
+- **Frontend:** React 18 + TypeScript + Vite
+- **Backend:** Node.js + Express
+- **Database:** Firebase
+- **AI:** Google Gemini 2.5 Flash
+- **Charts:** Chart.js + react-chartjs-2
 
-## 🛠️ Tech Stack
-
-| Layer    | Technology                   |
-| -------- | ---------------------------- |
-| Frontend | React 18 + Vite + TypeScript |
-| Styling  | Vanilla CSS (Glassmorphism)  |
-| Backend  | Node.js + Express.js         |
-| Database | Firebase Firestore           |
-| AI/NLP   | Google Gemini API            |
-| Charts   | Chart.js                     |
-
-## 📦 Installation
+## Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
 - npm or yarn
-- Google Gemini API key ([Get free key](https://ai.google.dev))
-- Firebase project (optional, uses mock data by default)
+- Gemini API key
 
-### Setup
+### Installation
 
-1. **Clone the repository**
+1. Clone the repository
 
-   ```bash
-   git clone <repository-url>
-   cd "ESG News Analyzer"
-   ```
+```bash
+git clone https://github.com/EMananq/2_ps.git
+cd 2_ps
+```
 
-2. **Install dependencies**
+2. Install dependencies
 
-   ```bash
-   # Backend
-   cd server
-   npm install
+```bash
+# Backend
+cd server
+npm install
 
-   # Frontend
-   cd ../client
-   npm install
-   ```
+# Frontend
+cd ../client
+npm install
+```
 
-3. **Configure environment**
+3. Configure environment variables
 
-   ```bash
-   # In server directory, create .env file
-   cd server
-   cp .env.example .env
-   # Edit .env and add your GEMINI_API_KEY
-   ```
+```bash
+# In server/.env
+PORT=3001
+GEMINI_API_KEY=your_api_key_here
+```
 
-4. **Start the application**
+4. Start the application
 
-   ```bash
-   # Terminal 1: Start backend
-   cd server
-   npm run dev
+```bash
+# Terminal 1 - Backend
+cd server
+npm run dev
 
-   # Terminal 2: Start frontend
-   cd client
-   npm run dev
-   ```
+# Terminal 2 - Frontend
+cd client
+npm run dev
+```
 
-5. **Open the app**
-   Navigate to http://localhost:5173
+5. Open http://localhost:5173 in your browser
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-├── client/                 # React Frontend
+2_ps/
+├── client/                 # React frontend
 │   ├── src/
 │   │   ├── components/     # UI components
-│   │   ├── pages/          # Page components
-│   │   ├── services/       # API client
-│   │   └── types/          # TypeScript types
-│   └── ...
-├── server/                 # Express Backend
+│   │   ├── pages/          # Page views
+│   │   └── App.tsx         # Main app
+│   └── package.json
+├── server/                 # Node.js backend
 │   ├── src/
-│   │   ├── config/         # Firebase config
-│   │   ├── routes/         # API routes
+│   │   ├── routes/         # API endpoints
 │   │   ├── services/       # AI service
 │   │   └── data/           # Mock news data
-│   └── ...
-└── docs/                   # Documentation
+│   └── package.json
+├── PROBLEM_STATEMENT.md    # Problem definition
+├── AI_USAGE_REPORT.md      # AI implementation details
+└── README.md               # This file
 ```
 
-## 🔌 API Endpoints
+## API Endpoints
 
-| Endpoint                       | Method | Description          |
-| ------------------------------ | ------ | -------------------- |
-| `/api/companies`               | GET    | List all companies   |
-| `/api/companies/:name/news`    | GET    | Get company news     |
-| `/api/companies/:name/summary` | GET    | AI-generated summary |
-| `/api/companies/:name/trends`  | GET    | Chart data           |
-| `/api/articles/:id/analyze`    | POST   | Analyze article      |
-| `/api/stats`                   | GET    | Overall statistics   |
+| Endpoint                | Method | Description          |
+| ----------------------- | ------ | -------------------- |
+| `/api/companies/search` | GET    | Search companies     |
+| `/api/news/:company`    | GET    | Get news for company |
+| `/api/ai/sentiment`     | POST   | Analyze sentiment    |
+| `/api/ai/categorize`    | POST   | Categorize ESG       |
+| `/api/ai/summary`       | POST   | Generate summary     |
 
-## 🎨 ESG Categories
+## AI Integration
 
-- **Environmental (E)** 🌿 - Climate, emissions, pollution, renewable energy
-- **Social (S)** 👥 - Labor, diversity, human rights, community
-- **Governance (G)** ⚖️ - Board structure, ethics, transparency
+This project uses Google's Gemini 2.5 Flash for:
 
-## 📊 Sample Companies
+1. **Sentiment Analysis** - Classifies article sentiment with confidence scores
+2. **ESG Categorization** - Tags articles with Environmental, Social, or Governance
+3. **Summary Generation** - Creates concise summaries of ESG issues
 
-Tesla, Amazon, Microsoft, BP, Unilever, Patagonia, Nike, Nestlé, Google, Walmart
+See `AI_USAGE_REPORT.md` for detailed implementation.
 
-## 📝 License
+## Sample Companies
 
-MIT License
+The app includes mock data for: Tesla, Microsoft, Amazon, BP, Unilever
+
+## Screenshots
+
+- Home page with company search
+- Dashboard with sentiment charts
+- News cards with AI analysis badges
+- AI-generated summary section
+
+## Author
+
+Manan - [GitHub](https://github.com/EMananq)
+
+## License
+
+This project is for educational purposes.
