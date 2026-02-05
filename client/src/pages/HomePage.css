@@ -1,0 +1,265 @@
+.home-page {
+  min-height: 100vh;
+  padding-bottom: var(--space-2xl);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding: 6rem var(--space-lg) 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 550px;
+  line-height: 1.7;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding: 0 var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.stat-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  text-align: center;
+  min-width: 140px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-card.esg-e .stat-number { color: var(--esg-environmental); }
+.stat-card.esg-s .stat-number { color: var(--esg-social); }
+.stat-card.esg-g .stat-number { color: var(--esg-governance); }
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+/* Companies Section */
+.companies-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.companies-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.loading-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl);
+  gap: var(--space-md);
+}
+
+.loading-state p {
+  color: var(--text-muted);
+}
+
+.company-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary-500);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.company-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.company-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.company-symbol {
+  font-size: 0.8rem;
+  color: var(--primary-500);
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.company-sector {
+  font-size: 0.85rem;
+  color: var(--primary-500);
+  margin-bottom: var(--space-sm);
+}
+
+.company-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.view-arrow {
+  position: absolute;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  font-size: 1.25rem;
+  color: var(--primary-500);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-fast);
+}
+
+.company-card:hover .view-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ESG Info Section */
+.esg-info-section {
+  max-width: 1200px;
+  margin: var(--space-2xl) auto 0;
+  padding: 0 var(--space-lg);
+}
+
+.esg-info-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.esg-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.esg-info-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.esg-info-card.esg-e-card { border-color: rgba(16, 185, 129, 0.3); }
+.esg-info-card.esg-s-card { border-color: rgba(14, 165, 233, 0.3); }
+.esg-info-card.esg-g-card { border-color: rgba(139, 92, 246, 0.3); }
+
+.esg-info-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.esg-info-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+}
+
+.esg-e-card h3 { color: var(--esg-environmental); }
+.esg-s-card h3 { color: var(--esg-social); }
+.esg-g-card h3 { color: var(--esg-governance); }
+
+.esg-info-card ul {
+  list-style: none;
+}
+
+.esg-info-card li {
+  padding: var(--space-xs) 0;
+  padding-left: var(--space-md);
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.esg-info-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+.esg-e-card li::before { color: var(--esg-environmental); }
+.esg-s-card li::before { color: var(--esg-social); }
+.esg-g-card li::before { color: var(--esg-governance); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.25rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .hero { padding: 4rem var(--space-md) 3rem; }
+}
