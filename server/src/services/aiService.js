@@ -13,7 +13,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
  */
 export async function analyzeSentiment(articleText, companyName) {
   try {
-    const model = genAI.getGenerativeModel({ model: 'models/gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const prompt = `Analyze the sentiment of this ESG news article about ${companyName}:
 
@@ -50,7 +50,7 @@ Respond ONLY with valid JSON in this exact format (no markdown, no code blocks):
  */
 export async function categorizeESG(articleText) {
   try {
-    const model = genAI.getGenerativeModel({ model: 'models/gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const prompt = `Categorize this news article into ESG categories:
 
@@ -92,7 +92,7 @@ Respond ONLY with valid JSON in this exact format (no markdown, no code blocks):
  */
 export async function generateSummary(articles, companyName) {
   try {
-    const model = genAI.getGenerativeModel({ model: 'models/gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const articlesText = articles
       .slice(0, 10)

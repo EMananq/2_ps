@@ -36,7 +36,7 @@ export default function NewsCard({ article, onClick }: NewsCardProps) {
     <article className="news-card" onClick={onClick}>
       <div className="news-card-header">
         <div className="news-badges">
-          <SentimentBadge sentiment={article.sentiment} />
+          <SentimentBadge sentiment={article.sentiment} showConfidence={true} />
           <span 
             className={`esg-badge esg-${esg.label.toLowerCase()}`} 
             title={`${esg.full}: ${article.esgCategory?.reasoning || ''}`}
