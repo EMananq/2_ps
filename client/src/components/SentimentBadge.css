@@ -1,0 +1,37 @@
+.sentiment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: help;
+}
+
+.sentiment-badge.positive {
+  background: var(--sentiment-positive-bg);
+  color: var(--sentiment-positive);
+}
+
+.sentiment-badge.negative {
+  background: var(--sentiment-negative-bg);
+  color: var(--sentiment-negative);
+}
+
+.sentiment-badge.neutral {
+  background: var(--sentiment-neutral-bg);
+  color: var(--sentiment-neutral);
+}
+
+.sentiment-icon {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sentiment-confidence {
+  opacity: 0.8;
+  font-weight: 500;
+}
